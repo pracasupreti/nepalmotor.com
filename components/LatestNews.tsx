@@ -1,4 +1,3 @@
-import { LocaleRouteNormalizer } from "next/dist/server/normalizers/locale-route-normalizer";
 import Image from "next/image";
 
 const news = [
@@ -31,10 +30,32 @@ const news = [
 
 const LatestNews = () => {
   return (
-    <div className="w-full max-w-screen-2xl mx-auto px-2 md:px-6 py-5 lg:px-8">
-      <h2 className="text-2xl md:text-3xl font-bold mb-6 text-black">
-        Latest Car News From Our Experts
+    <div className="w-full max-w-screen-2xl mx-auto px-2 md:px-8 py-5 lg:px-16">
+      <h2 className="text-2xl md:text-4xl font-semibold mb-6 text-black">
+        Latest Car News
       </h2>
+      <div className="flex justify-between text-sm md:text-base text-gray-600 mb-4">
+        <p className="text-gray-700 mb-4">
+          Stay ahead with the latest insights, trends, and innovations in the
+          automotive world.
+        </p>
+        <p className="text-gray-700">
+          <select
+            id="blogs"
+            name="blogs"
+            className="px-6 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#111929]"
+            required
+          >
+            <option value="all">All Categories</option>
+            <option value="reviews">Reviews</option>
+            <option value="maintainance">Maintainance</option>
+            <option value="performance">Performance</option>
+            <option value="news">Industry news</option>
+            <option value="guide">Buyer's Guide</option>
+          </select>
+        </p>
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {/* Left big news image */}
         <div className="md:row-span-2 md:col-span-1">

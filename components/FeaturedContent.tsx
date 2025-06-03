@@ -157,7 +157,7 @@ const FeaturedContent: React.FC = () => {
             alt="Featured publications logos"
             width={1200} // Approximate width of your combined logo image
             height={60}   // Approximate height of your combined logo image
-            className="object-contain w-full h-auto max-w-4xl" // Responsive: takes full width up to max-w-4xl, scales height
+            className="object-contain w-full h-auto max-w-6xl" // Responsive: takes full width up to max-w-4xl, scales height
           />
         </div>
       </section>

@@ -4,7 +4,7 @@ import React from "react";
 const page = () => {
   return (
     <>
-      <h1 className="text-center text-6xl font-bold mt-10">Exchange EV Page</h1>
+      <h1 className="text-center text-6xl font-bold mt-10">Exchange to EV</h1>
 
       <h3 className="text-center text-lg font-semibold mt-4">
         Your one-stop destination for electric vehicle exchange
@@ -67,26 +67,26 @@ const page = () => {
           <input
             type="number"
             placeholder="KM driven"
-            className="w-full my-4 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full mt-4 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
           <input
             type="text"
             placeholder="Expected Valuation amount (in NPR)"
-            className="w-full mt-4 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full my-4 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
 
           <div className="my-4 flex">
             <label className="text-lg font-semibold w-[50%]">
-              Vehicle Condition:
+              Features:
             </label>
             <div className="flex flex-col ml-4">
               <div className="flex">
                 <input
                   type="radio"
-                  name="condition"
-                  value="new"
+                  name="features"
+                  value="full option"
                   className="mt-0"
                 />
                 <label className="ml-2">Full Option</label>
@@ -94,8 +94,8 @@ const page = () => {
               <div className="flex">
                 <input
                   type="radio"
-                  name="condition"
-                  value="minimal damage"
+                  name="features"
+                  value="mid option"
                   className="mt-0"
                 />
                 <label className="ml-2">Mid Option</label>
@@ -103,8 +103,8 @@ const page = () => {
               <div className="flex">
                 <input
                   type="radio"
-                  name="condition"
-                  value="mechanical issues"
+                  name="features"
+                  value="dont know"
                   className="mt-0"
                 />
                 <label className="ml-2">I don't know</label>
@@ -230,43 +230,67 @@ const page = () => {
           <input
             type="text"
             placeholder="Vehicle Model (Leave empty if not applicable)"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full mt-4 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
-
+          <div className="mt-4 flex">
+            <input
+              type="number"
+              placeholder="Minimum Price range"
+              className="w-full mr-4 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <input
+              type="number"
+              placeholder="Maximum Price range"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+          <div className="my-4 flex">
+            <label className="text-lg font-semibold w-[50%]">
+              Looking to Finance? :
+            </label>
+            <div className="flex flex-col ml-4">
+              <div className="flex">
+                <input
+                  type="radio"
+                  name="finance"
+                  value="yes"
+                  className="mt-0"
+                />
+                <label className="ml-2">Yes</label>
+              </div>
+              <div className="flex">
+                <input
+                  type="radio"
+                  name="finance"
+                  value="no"
+                  className="mt-0"
+                />
+                <label className="ml-2">No</label>
+              </div>
+            </div>
+          </div>
           <input
             type="number"
-            placeholder=" Price range (Leave empty if not applicable)"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-
-          <input
-            type="text"
-            placeholder="Are you looking to finance?"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-          <input
-            type="number"
-            placeholder="Downpayment amount (Leave empty if not applicable)"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Downpayment amount (If you are looking to finance)"
+            className="w-full mt-4 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
 
           <textarea
             placeholder="Additional Information"
-            className="w-full mt-4 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full my-4 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             rows={4}
             cols={50}
           />
-
-          <input
-            type="submit"
-            value="Submit"
-            className="bg-blue-500 text-white m-4 p-2 rounded-lg active:border-blue-700"
-          />
-          <input
-            type="reset"
-            value="Reset"
-            className="ml-4 bg-blue-500 text-white m-4 p-2 rounded-lg active:border-blue-700"
-          />
+            <input
+              type="submit"
+              value="Submit"
+              className="cursor-pointer text-black mr-4 font-medium border-2 border-gray-500 py-2 px-6 focus:outline-none focus:ring-2 focus:ring-black hover:bg-gray-100"
+            />
+            <input
+              type="reset"
+              value="Reset"
+              className="cursor-pointer text-gray-600 font-medium border-2 border-gray-400 py-2 px-6 transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-600 hover:bg-gray-50"
+            />
         </form>
       </div>
     </>
